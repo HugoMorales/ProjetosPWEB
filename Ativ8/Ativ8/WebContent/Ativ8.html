@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Ativ8</title>
+  </head>
+  
+  <body>
+    <h2>Escolha o seu prato</h2>
+    <br>
+    <p><b>Prato principal:</b>
+    
+    <div class="input-group">
+  		<div class="input-group-prepend">
+    		<div class="input-group-text">
+      			<input type="radio" name="pPrinc" id="pP1" aria-label="Radio button for following text input">
+    		</div>
+  		</div>
+  		<input type="text" class="form-control" aria-label="Text input with radio button" disabled value="Massa">
+	</div>
+	    <div class="input-group">
+  		<div class="input-group-prepend">
+    		<div class="input-group-text">
+      			<input type="radio" name="pPrinc" id="pP2" aria-label="Radio button for following text input">
+    		</div>
+  		</div>
+  		<input type="text" class="form-control" aria-label="Text input with radio button" disabled value="Carne">
+	</div>
+	    <div class="input-group">
+  		<div class="input-group-prepend">
+    		<div class="input-group-text">
+      			<input type="radio" name="pPrinc" id="pP3" aria-label="Radio button for following text input">
+    		</div>
+  		</div>
+  		<input type="text" class="form-control" aria-label="Text input with radio button" disabled value="Peixe">
+	</div>
+	<br>
+	
+	<b>Acompanhamentos:</b>
+	<div class="input-group mb-3">
+  		<div class="input-group-prepend">
+    		<div class="input-group-text">
+      			<input type="checkbox" id="aP1" aria-label="Checkbox for following text input">
+    		</div>
+  		</div>
+  		<input type="text" class="form-control" aria-label="Text input with checkbox" disabled value="Salada">
+	</div>
+		<div class="input-group mb-3">
+  		<div class="input-group-prepend">
+    		<div class="input-group-text">
+      			<input type="checkbox" id="aP2" aria-label="Checkbox for following text input">
+    		</div>
+  		</div>
+  		<input type="text" class="form-control" aria-label="Text input with checkbox"  disabled value="Legumes">
+	</div>
+		<div class="input-group mb-3">
+  		<div class="input-group-prepend">
+    		<div class="input-group-text">
+      			<input type="checkbox" id="aP3" aria-label="Checkbox for following text input">
+    		</div>
+  		</div>
+  		<input type="text" class="form-control" aria-label="Text input with checkbox" disabled value="Farofa">
+	</div>
+		<div class="input-group mb-3">
+  		<div class="input-group-prepend">
+    		<div class="input-group-text">
+      			<input type="checkbox" id="aP4" aria-label="Checkbox for following text input">
+    		</div>
+  		</div>
+  		<input type="text" class="form-control" aria-label="Text input with checkbox" disabled value="Fritas">
+	</div>
+	<br>
+	
+	<div class="input-group mb-3">
+  		<div class="input-group-prepend">
+    		<label class="input-group-text" for="inputGroupSelect01"><b>Convênio:</b></label>
+  		</div>
+  			<select class="custom-select" id="selCon">
+   				<option selected>----</option>
+    			<option value="IDK1">IDK1</option>
+    			<option value="IDK2">IDK2</option>
+  			</select>
+	</div>
+	<br>
+	
+	<b>Observações:</b><br>
+	<textarea rows="3" columns="50" id="txt"></textarea>
+	<br><br>
+	
+	<button type="button" class="btn btn-secondary" onclick="calc()">Calcular</button>
+	<br><br>
+	<h4 id="hResult"></h4>
+	<p id="resultCalc"></p>
+    
+    </p>
+    <script src="script.js"></script>
+  </body>
+</html>
