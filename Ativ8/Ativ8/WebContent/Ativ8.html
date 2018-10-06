@@ -99,10 +99,27 @@
 	<textarea rows="3" columns="50" id="txt"></textarea>
 	<br><br>
 	
-	<button type="button" class="btn btn-secondary" onclick="calc()">Calcular</button>
+	<button type="button" class="btn btn-secondary" onclick="calc()" data-toggle="modal" data-target="#resultModal">Calcular</button>
 	<br><br>
-	<h4 id="hResult"></h4>
-	<p id="resultCalc"></p>
+	
+	<div class="modal" tabindex="-1" role="dialog" id="resultModal">
+  		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+      		<div class="modal-header">
+        		<h5 class="modal-title">Total do pedido</h5>
+        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          		<span aria-hidden="true">&times;</span>
+        		</button>
+      		</div>
+      		<div class="modal-body">
+        		<p id="pModal"></p>
+      		</div>
+      		<div class="modal-footer">
+        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      		</div>
+    		</div>
+  		</div>
+		</div>
     
     </p>
     <script src="Script.js"></script>

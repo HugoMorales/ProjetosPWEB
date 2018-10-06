@@ -33,8 +33,10 @@ function calc(){
 			result = result - (result * 0.25);
 		}
 	
-	alert(result);
+	document.getElementById("pModal").innerHTML = result;
 	
-	document.getElementById("hResult").innerHTML = "Conta final:";
-	document.getElementById("resultCalc").innerHTML = "R$ " + result;
+	$('#resultModal').on('shown.bs.modal', function () {
+		  $('#myInput').trigger('focus')
+		})
+	
 }
