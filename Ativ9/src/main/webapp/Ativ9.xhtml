@@ -1,0 +1,63 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+     
+    <h:head>
+    	<meta charset="UTF-8"/>
+    	<title>Atividade 9 PWEB</title>
+    </h:head>
+ 
+    <h:body>
+    <h:form id="formAluno">
+    	<p:panelGrid columns="2">
+    	<f:facet name="header">
+        <p:row>
+            <p:column>Cadastrar aluno</p:column>
+        </p:row>
+        </f:facet>
+        	<p:outputLabel value="RA"/>
+        	<p:inputText value="#{alunoMB.aluno.RA}"/>
+        	<p:outputLabel value="Nome"/>
+        	<p:inputText value="#{alunoMB.aluno.nome}"/>
+        	<p:outputLabel value="Curso"/>
+        	<p:inputText value="#{alunoMB.aluno.curso}"/>
+        	<p:outputLabel value="Telefone"/>
+        	<p:inputText value="#{alunoMB.aluno.telefone}"/>
+    	</p:panelGrid>
+    	
+    	<p:commandButton value="Cadastrar"
+    		action="#{alunoMB.save()}"
+    		update=":formAluno"
+    	/>
+    	
+    	<br></br><br></br>
+    	
+    	<p:dataTable value="#{alunoMB.alunos}" var="aux">
+    	
+    		<f:facet name="header">
+        	<p:row>
+            	<p:column>Alunos cadastrados</p:column>
+        	</p:row>
+        	</f:facet>
+    		
+    		<p:column headerText="RA">
+        		<h:outputText value="#{aux.RA}" />
+    		</p:column>
+ 			
+ 			<p:column headerText="Nome">
+        		<h:outputText value="#{aux.nome}" />
+    		</p:column>
+    		
+    		<p:column headerText="Curso">
+        		<h:outputText value="#{aux.curso}" />
+    		</p:column>
+    		
+    		<p:column headerText="Telefone">
+        		<h:outputText value="#{aux.telefone}" />
+    		</p:column>
+    	
+    	</p:dataTable>
+    </h:form>
+    </h:body>
+</html>
